@@ -3,13 +3,14 @@
 //Date:		2016-06-15
 //Desc:		Designed for google code jam practice problem "Minimum Scalar Product" from round 1A in 2008
 //Problem:	https://code.google.com/codejam/contest/32016/dashboard#s=p0
-//Results:	
+//Results:	Small:751ms     Large:77ms
 
 package net.garyscorner.codejamminscalarprod;
 
 //variables
 
 import java.io.*;
+import java.math.BigInteger;
 
 
 
@@ -46,17 +47,8 @@ public class CodeJamMinScalarProd {
             //solve
             testcase.Solve();
             //print solution to err
-            
-            System.err.printf("X:");
-            for(int i=0; i<testcase.vectorlen; i++) {
-                System.err.printf(" %1$d", testcase.x[i]);
-            }
-            System.err.printf("\nY:");
-            for(int i=0; i<testcase.vectorlen; i++) {
-                System.err.printf(" %1$d", testcase.y[i]);
-            }
-            
-            System.err.printf("\nCase #%1$d, solved in %2$d\tAns=%3$d\n", testcase.casenum, testcase.solvetime, testcase.solution);
+             
+            System.err.printf("Case #%1$d, solved in %2$d\tAns=%3$s\n", testcase.casenum, testcase.solvetime, testcase.solution.toString());
         }
         
         System.err.printf("Outputing solution to:  %1$s\n", this.outfileopt);
@@ -96,10 +88,10 @@ public class CodeJamMinScalarProd {
             testcases[i].vectorlen = parseInt(line);
             
             //initilize x and y
-            testcases[i].x = new int[testcases[i].vectorlen];
-            testcases[i].y = new int[testcases[i].vectorlen];
+            testcases[i].x = new BigInteger[testcases[i].vectorlen];
+            testcases[i].y = new BigInteger[testcases[i].vectorlen];
             
-            int[] vectorpointer; //pointer to the current vector
+            BigInteger[] vectorpointer; //pointer to the current vector
             
             vectorpointer = testcases[i].x;
             
@@ -111,7 +103,7 @@ public class CodeJamMinScalarProd {
                 
                 //Load the vector
                 for(int c=0; c<testcases[i].vectorlen; c++) {
-                    vectorpointer[c] = this.parseInt(vectordata[c]);
+                    vectorpointer[c] = new BigInteger(vectordata[c]);
                 }
                 vectorpointer = testcases[i].y;  //change vector to y and repeat
             }
