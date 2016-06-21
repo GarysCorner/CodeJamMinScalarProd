@@ -5,7 +5,7 @@
 //Problem:	https://code.google.com/codejam/contest/32016/dashboard#s=p0
 //Results:	Small:751ms     Large:77ms
 
-package net.garyscorner.codejamminscalarprod;
+//package net.garyscorner.codejamminscalarprod;
 
 
 import java.math.BigInteger;
