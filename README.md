@@ -1,13 +1,6 @@
 #Problem A. Minimum Scalar Product
 ##From https://code.google.com/codejam/contest/32016/dashboard#s=p0
 
-This contest is open for practice. You can try every problem as many times as you like, though we won't keep track of which problems you solve. Read the Quick-Start Guide to get started.
-Small input
-5 points	
-Solve A-small
-Large input
-10 points	
-Solve A-large
 Problem
 
 You are given two vectors v1=(x1,x2,...,xn) and v2=(y1,y2,...,yn). The scalar product of these vectors is a single number, calculated as x1y1+x2y2+...+xnyn.
@@ -25,40 +18,34 @@ Case #X: Y
 where X is the test case number, starting from 1, and Y is the minimum scalar product of all permutations of the two given vectors.
 Limits
 
-Small dataset
-
+###Small dataset
+```
 T = 1000
 1 ≤ n ≤ 8
 -1000 ≤ xi, yi ≤ 1000
+```
 
-Large dataset
-
+###Large dataset
+```
 T = 10
 100 ≤ n ≤ 800
 -100000 ≤ xi, yi ≤ 100000
-
+```
 Sample
 
 
-###Input
+###Input 
+```
 2
-
 3
-
 1 3 -5
-
 -2 4 1
-
 5
-
 1 2 3 4 5
-
 1 0 1 0 1
-
-
+```
 ###Output
+```
 Case #1: -25
-
 Case #2: 6
-
-
+```
